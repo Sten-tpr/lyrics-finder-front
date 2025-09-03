@@ -1,0 +1,86 @@
+$primary-color: #4caf50;
+$secondary-color: #ffffff;
+$background-color: #f0f4f8;
+$button-hover: darken($primary-color, 10%);
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $background-color;
+}
+
+.container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: $secondary-color;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+    margin-bottom: 25px;
+  }
+
+  input {
+    width: 70%;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+      background-color: $button-hover;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  .loading {
+    margin-top: 20px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  .result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: lighten($primary-color, 45%);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: darken($primary-color, 20%);
+    }
+
+    p {
+      font-style: italic;
+      font-size: 18px;
+      color: #333;
+    }
+  }
+}
